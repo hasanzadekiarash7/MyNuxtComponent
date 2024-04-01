@@ -1,0 +1,71 @@
+@import url('./fonts/font.scss');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-white: #fff;
+    --background-color-red-light: #EF5350;
+    --color-black-light: #37474F;
+}
+
+body {
+    font-family: "vazir regular", serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media only screen and (max-width: 1200px) {
+        max-width: 960px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        max-width: 720px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        max-width: 540px;
+
+        .header__sidebar {
+            display: block;
+
+        }
+
+        .links {
+            /** display: none; */
+            direction: rtl;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            bottom: 0;
+            background-color: #EF9A9A;
+            max-width: 15rem;
+            transition: all 0.5s ease-in-out;
+            padding: 2rem;
+            flex-flow: column nowrap;
+
+            .link__item {
+                margin-bottom: 2rem;
+                font-size: 1.2rem;
+            }
+            .link__item__linkStyle{
+                color: #fff;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        max-width: 100%;
+        .comments__comments__box{
+            max-width: 100%;
+            margin: 10rem;
+        }
+    }
+}
